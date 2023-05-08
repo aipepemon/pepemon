@@ -1,0 +1,9 @@
+footer {
+	flex-shrink: 0;
+	background-color: #1E40AF;
+	color: white;
+	padding: 1.75rem;
+	@include mobile {
+		font-size: 14px;
+	}
+}

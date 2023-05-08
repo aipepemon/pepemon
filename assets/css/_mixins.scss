@@ -1,0 +1,133 @@
+$small_mobile: "(max-width: 375px)";
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$moblet: "(max-width: 991px)";
+$desktop: "(min-width: 992px) and (max-width: 1199px)";
+$large_desktop: "(min-width: 1200px)";
+
+@mixin small_mobile() {
+	@media #{$small_mobile}{
+		@content;
+	}
+}
+
+@mixin mobile() {
+	@media #{$mobile}{
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media #{$tablet}{
+		@content;
+	}
+}
+
+@mixin moblet() {
+	@media #{$moblet}{
+		@content;
+	}
+}
+
+@mixin desktop() {
+	@media #{$desktop}{
+		@content;
+	}
+}
+
+@mixin large_desktop() {
+	@media #{$large_desktop}{
+		@content;
+	}
+}
+
+@mixin heading($font_size:0) {
+	@if $font_size == 0 {
+		@include responsiveSize($font-size-xlarge);
+	} @else {
+		@include responsiveSize($font_size);
+	}
+}
+
+@mixin responsiveSize($size) {
+	font-size: $size;
+	@include moblet {
+		font-size: $size * 0.667;
+	}
+}
+
+@mixin fontAwesome($icon, $brand: false) {
+	@if ($brand) {
+		font-family: 'Font Awesome 5 Brands', sans-serif !important;
+	} @else {
+		font-family: 'Font Awesome 5 Free', sans-serif !important;
+	}
+
+	font-size: inherit;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	content: $icon !important;
+	font-weight: 700;
+}
+
+@mixin darkenButton($color) {
+	background: $color;
+	border-color: $color !important;
+
+	&:hover, &:active, &:focus {
+		background: darken($color, 10%) !important;
+		border-color: darken($color, 10%) !important;
+	}
+}
+
+%heading-xlarge {
+	@include heading($font-size-xlarge);
+}
+
+%heading-large {
+	@include heading($font-size-large);
+}
+
+%heading-medium {
+	@include heading($font-size-medium);
+}
+
+%heading-small {
+	font-size: $font-size-small;
+}
+
+%button {
+	border: 1px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	text-align: center;
+	box-shadow: none !important;
+}
+
+@mixin truncate($line) {
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin link($reserve:false) {
+	@if ($reserve == true) {
+		color: #8697A2;
+
+		&:hover {
+			color: $color-primary;
+		}
+	} @else {
+		color: $color-primary;
+
+		&:hover {
+			color: black;
+		}
+	}
+}
