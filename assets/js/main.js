@@ -25,12 +25,10 @@
 		},
 		CloseMenu: function () {
 			const navLinks = document.querySelectorAll('.nav-item');
-			const menuToggle = document.querySelector('.offcanvas');
 			navLinks.forEach((elem) => {
 				elem.addEventListener('click', () => {
 					setTimeout(function() {
 						$("button.navbar-toggler").click();
-
 					}, 500);
 				});
 			});

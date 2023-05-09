@@ -172,7 +172,7 @@
 
 		.js-animation {
 			margin-top: -5rem;
-			@include mobile {
+			@media (max-width: 1200px) {
 				margin-top: -3rem;
 			}
 		}

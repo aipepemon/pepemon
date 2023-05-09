@@ -61,11 +61,15 @@ header {
 	}
 }
 
-.youtube-container, iframe {
+.youtube-container {
 	width: 100% !important;
 	height: 100vh !important;
 
 	@include mobile {
-		height: 70vh !important;
+		height: auto !important;
+	}
+
+	video {
+		object-fit: fill;
 	}
 }
