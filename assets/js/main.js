@@ -39,6 +39,8 @@
 
 	$(document).ready(function () {
 		fn.Animate();
-		fn.CloseMenu()
+		if ($(window).width() < 991) {
+			fn.CloseMenu()
+		}
 	});
 })(jQuery);
