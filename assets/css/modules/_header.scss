@@ -38,9 +38,10 @@ header {
 		}
 
 		.nav-item {
-			@include moblet{
+			@include moblet {
 				margin-bottom: 0.5rem;
 			}
+
 			+ .nav-item {
 				margin-left: 2rem;
 				@include moblet {
@@ -60,10 +61,11 @@ header {
 	}
 }
 
-.youtube-container {
-	height: 100vh;
+.youtube-container, iframe {
+	width: 100% !important;
+	height: 100vh !important;
 
-	video {
-		object-fit: fill;
+	@include mobile {
+		height: 70vh !important;
 	}
 }

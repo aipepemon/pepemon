@@ -3,6 +3,12 @@ footer {
 	background-color: #1E40AF;
 	color: white;
 	padding: 1.75rem;
+
+	img {
+		width: 25px;
+		height: 25px;
+	}
+
 	@include mobile {
 		font-size: 14px;
 	}
