@@ -131,6 +131,12 @@
 					}
 				}
 
+				&:nth-child(3) {
+					&:before {
+						background-color: #66B9F9;
+					}
+				}
+
 				&:last-child {
 					&:before {
 						background-color: #FFC078;
