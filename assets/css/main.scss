@@ -29,3 +29,28 @@ section.main {
 		padding: 0;
 	}
 }
+
+.menu-right {
+	position: fixed;
+	right: 10px;
+	bottom: 30%;
+	padding: 14px 8px;
+	background-color: #DCEBFE;
+	border-radius: 10px;
+	z-index: 10000;
+
+
+	a {
+		display: block;
+
+		+ a {
+			margin-top: 24px;
+		}
+	}
+
+	img {
+		width: 32px;
+		height: 32px;
+		object-fit: contain;
+	}
+}
