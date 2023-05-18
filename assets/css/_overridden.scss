@@ -47,6 +47,12 @@ img {
 			margin-top: -1rem;
 		}
 	}
+
+	&.text-white {
+		&:before {
+			background: linear-gradient(90deg, #FFFFFF 28.67%, rgba(217, 217, 217, 0) 86%);
+		}
+	}
 }
 
 .heading-md {

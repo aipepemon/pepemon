@@ -235,12 +235,36 @@
 		}
 	}
 
+	&.nft {
+		background: #1E40AF url(../images/bg-nft.jpg) no-repeat;
+		background-size: 100% 100%;
+		padding: 60px 0;
+		color: white;
+		@media (min-width: 1600px) {
+			background-position: 80px 0;
+		}
+		@include moblet {
+			background: #1E40AF url("../images/bg-nft-mb.jpg") no-repeat;
+			background-size: contain;
+		}
+		@include mobile {
+			padding: 40px 0;
+		}
+
+		ul {
+			li {
+				margin: 1rem 0;
+			}
+		}
+	}
+
 	&.payment {
-		.heading-lg{
-			@include mobile{
+		.heading-lg {
+			@include mobile {
 				margin-bottom: 1rem;
 			}
 		}
+
 		.partners {
 			.item {
 				padding: 1.5rem 3.8rem;
