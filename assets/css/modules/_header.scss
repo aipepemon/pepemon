@@ -34,7 +34,7 @@ header {
 
 			img {
 				max-height: 68px;
-				@include mobile{
+				@include mobile {
 					max-height: 35px;
 				}
 			}
@@ -71,7 +71,7 @@ header {
 		padding: 0.25rem 1rem;
 		border: 1px solid white;
 		margin: 0 8rem 0.25rem auto;
-		@include mobile{
+		@include mobile {
 			margin: 0 auto;
 			font-size: 12px;
 		}
@@ -83,6 +83,15 @@ header {
 		.text-primary {
 			color: #FDE68A !important;
 			font-weight: 700;
+		}
+
+		img {
+			width: 18px;
+			height: 18px;
+			@include mobile {
+				width: 15px;
+				height: 15px;
+			}
 		}
 	}
 }
