@@ -195,6 +195,7 @@
 			border-radius: 16px;
 			background: linear-gradient(180deg, rgba(255, 255, 255, 0.953125) 0%, rgba(255, 255, 255, 0) 100%);
 			padding: 1.5rem;
+			height: 100%;
 
 			&:hover {
 				background: linear-gradient(180deg, #DEEDFF 0%, rgba(241, 241, 241, 0) 100%);
@@ -226,6 +227,10 @@
 					background-repeat: no-repeat;
 					background-position: 0 5px;
 					padding-left: 30px;
+
+					a {
+						color: black;
+					}
 
 					+ li {
 						margin-top: 1rem;
@@ -278,6 +283,26 @@
 				&:hover {
 					background-color: darken(#F1F5F9, 10%);
 				}
+			}
+		}
+	}
+
+	&.game {
+		background: #1E40AF url(../images/bg-game.jpg) no-repeat;
+		background-size: 100% 100%;
+		padding: 0;
+
+		.image {
+			width: 100%;
+			@include large_desktop {
+				height: 700px;
+			}
+		}
+
+		.custom-padding {
+			padding: 4rem;
+			@include mobile {
+				padding: 3rem 1rem;
 			}
 		}
 	}
