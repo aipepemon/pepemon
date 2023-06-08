@@ -294,9 +294,6 @@
 
 		.image {
 			width: 100%;
-			@include large_desktop {
-				height: 700px;
-			}
 		}
 
 		.custom-padding {
